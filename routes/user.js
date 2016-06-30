@@ -1,12 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const User = require('../models/user');
 
 router.get('/new', (req, res) => {
-  res.render('new');
+  res.render('users/new');
 });
 
 router.post('/create', (req, res) => {
-  res.send('at user create');
+  // create user
+  // then redirect
+  User.create(req.query);
+  res.redirect('/');
 });
 
 router.get('/show', (req, res) => {

@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 
 const newCtrl = (req, res) => {
-  res.send('at new tweet ctrl');
+  res.render('../views/user/new');
 };
 
 const createCtrl = (req, res) => {
